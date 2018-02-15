@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne = {
+var articleone = {
   title: 'Article One|Mohit Patni',
   heading: 'Article one',
   date: 'Feb 15 2018',
@@ -73,7 +73,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-    res.send(createTemplate(articleOne));
+    res.send(createTemplate(articleone));
 });
 
 app.get('/article-two',function(req,res){
