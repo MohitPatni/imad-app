@@ -5,12 +5,74 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleOne = {
+  title: 'Article One | Mohit Patni',
+  heading:'Article one',
+  date:'Feb 15 2018',
+  content: `<p>
+            Hi, My Name Is Mohit Patni.
+            </p>
+            <p>
+            I have done B.sc in Computer science from DAVV univercity Indore with 66%.As my roots are from Sonkatch. So I completed my 12<sup>th</sup> from SP School with 77%
+            </p>
+            <p>
+            I am fresher but
+            </p>
+            <p>
+            My strengths are my attitude that I like to take challenges that I CAN do it, self motivated person, self disciplined I am a good team player as well as has a good ability to lead the team. I can adopt to any kind of environment. I am a good listener and quick learner.
+            </p>
+            <p>
+            My short term goal is to get placed in a reputed company which will give me an opportunity to enhance my skills and Knowledge.
+            </p>
+            <p>
+            My long term goal would be reaching the higher position in company like CEO.
+            </p>`
+};
+
+
+function createTemplate (data){
+   var title = data.title;
+   var heading = data.heading;
+   var date = data.date;
+   var content = data.content;
+var htmlTemplate =`
+    <html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="viewport" content="width-device-width,intial-scale=1">
+              <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        <body>
+            <div class="container">
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <hr/>
+            <h4>
+           ${heading}
+            </h4>
+            <div>
+               ${date}
+            </div>
+            <div>
+                ${content}
+            </div>
+            </div>
+            </body>
+    </html>
+    `;
+    return htmlTemplate;
+}
+    
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(articalOne));
 });
 
 app.get('/article-two',function(req,res){
