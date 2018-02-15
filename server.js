@@ -15,7 +15,7 @@ var articleOne = {
             Hi, My Name Is Mohit Patni.
             </p>
             <p>
-            I have done B.sc in Computer science from DAVV univercity Indore with 66%.As my roots are from Sonkatch. So I completed my 12<sup>th</sup> from SP School with 77%
+            I have done B.sc in Computer science from DAVV university Indore with 66%.As my roots are from Sonkatch. So I completed my 12<sup>th</sup> from SP School with 77%
             </p>
             <p>
             I am fresher but
