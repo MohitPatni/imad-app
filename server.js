@@ -7,10 +7,11 @@ app.use(morgan('combined'));
 
 
 var articleOne = {
-  title: 'Article One | Mohit Patni',
-  heading:'Article one',
-  date:'Feb 15 2018',
-  content: `<p>
+  title: 'Article One|Mohit Patni',
+  heading: 'Article one',
+  date: 'Feb 15 2018',
+  content: ` 
+            <p>
             Hi, My Name Is Mohit Patni.
             </p>
             <p>
@@ -27,8 +28,8 @@ var articleOne = {
             </p>
             <p>
             My long term goal would be reaching the higher position in company like CEO.
-            </p>`
-};
+            </p>
+            `};
 
 
 function createTemplate (data){
