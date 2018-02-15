@@ -6,12 +6,12 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles ={
+var articles = {
             'article-one' :{
-  title: 'Article One|Mohit Patni',
-  heading: 'Article one',
-  date: 'Feb 15 2018',
-  content: `
+    title: 'Article One|Mohit Patni',
+    heading: 'Article one',
+    date: 'Feb 15 2018',
+    content: `
             <p>
             Hi, My Name Is Mohit Patni.
             </p>
@@ -54,7 +54,7 @@ var articles ={
             <p>
             My long term goal would be reaching the higher position in company like CEO.
             </p>
-            `},
+            `}
 };
 
 
