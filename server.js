@@ -98,11 +98,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:atricleName',function(req,res){
+//app.get('/:atricleName',function(req,res){
     //articleName == article-one
     //articles[articleName] == {} content object of article one
-    var articleName = req.params.articleName; //extract the article name and use in article obj.
-     res.send(createTemplate(articles[articleName]));
+   // var articleName = req.params.articleName; //extract the article name and use in article obj.
+   //  res.send(createTemplate(articles[articleName]));
+//});
+app.get('/article-one',function(req,res){
+    //articleName == article-one
+    //articles[articleName] == {} content object of article one
+    //var articleName = req.params.articleName; //extract the article name and use in article obj.
+     res.send(createTemplate(articles-one));
 });
 
 app.get('/ui/style.css', function (req, res) {
