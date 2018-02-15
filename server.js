@@ -10,7 +10,7 @@ var articleOne = {
   title: 'Article One|Mohit Patni',
   heading: 'Article one',
   date: 'Feb 15 2018',
-  content: ` 
+  content: `
             <p>
             Hi, My Name Is Mohit Patni.
             </p>
@@ -73,7 +73,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-    res.send(cteateTemplate(articleOne));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two',function(req,res){
