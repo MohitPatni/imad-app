@@ -108,7 +108,7 @@ app.get('/article-one',function(req,res){
     //articleName == article-one
     //articles[articleName] == {} content object of article one
     //var articleName = req.params.articleName; //extract the article name and use in article obj.
-     res.send(createTemplate(articles-one));
+     res.send(createTemplate(articles[article-one]));
 });
 
 app.get('/ui/style.css', function (req, res) {
