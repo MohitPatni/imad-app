@@ -4,7 +4,7 @@ console.log('Loaded!');
 //element.innerHTML = "Lets do something new";
 var button = document.getElementById('counter');
 var counter = 0;
-button.onClick = function(){
+button.onclick = function(){
   //make a response to the counter endpint
   
   
