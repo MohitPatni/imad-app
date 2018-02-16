@@ -20,6 +20,6 @@ button.onclick = function(){
     //Not done yet
   };
   //make a request 
-  request.open('GET', 'http://http://mohitpatni293.imad.hasura-app.io/counter', true);
+  request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/counter', true);
   request.send(null);
 }; 
