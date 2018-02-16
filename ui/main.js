@@ -3,15 +3,23 @@ console.log('Loaded!');
 //var element = document.getElementById('main-text');
 //element.innerHTML = "Lets do something new";
 var button = document.getElementById('counter');
-var counter = 0;
+
 button.onclick = function(){
-  //make a response to the counter endpint
-  
+  //Create a request object
+  var request  = new XMLHttpRequest();
   
   //capture the response and store into variable.
-  
-  //render the variable in the correct span.
-  counter = counter + 1;
-  var span = document.getElementById('count');
-  span.innerHTML = counter.toString();
+  request.onclickstatechange = function(){
+    if(request.readystate == XMLHttpRequest.DONE) {
+        //take some action
+        if(request.status == 200){
+           var counter = reuest.responseText;
+           span.innerHTML = counter.toString();
+        }
+    }
+    //Not done yet
+  };
+  //make a request 
+  request.open('GET', 'http://http://mohitpatni293.imad.hasura-app.io/counter', true);
+  request.send(null);
 }; 
