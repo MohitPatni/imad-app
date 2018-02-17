@@ -56,5 +56,5 @@ ul.innerHTML = list;
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/submit-name?name='+ name, true);
   request.send(null);
 }; 
-        };
+    
         
