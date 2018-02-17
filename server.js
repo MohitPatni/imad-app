@@ -125,9 +125,9 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names =[];
-app.get('/submit-name/:name', function(req,res){
+app.get('/submit-name', function(req,res){ // /submit-name?name = xxx
   //get the name from the request
-  var name = req.params.name;//extract name
+  var name = req.query.name;//extract name
   names.push(name);
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(names));//json coverting aray into a string
