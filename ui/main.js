@@ -2,9 +2,9 @@ console.log('Loaded!');
 // change the text of main text div
 //var element = document.getElementById('main-text');
 //element.innerHTML = "Lets do something new";
-/*var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 
-/*button.onclick = function(){
+button.onclick = function(){
   //Create a request object
   var request  = new XMLHttpRequest();
   
@@ -39,4 +39,4 @@ submit.onclick = function(){
 }
 var ul =  document.getElementById('namelist');
 ul.innerHTML = list;
-        };*/
+        };
