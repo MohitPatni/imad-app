@@ -1,8 +1,8 @@
-console.log('Loaded!');
+//console.log('Loaded!');
 // change the text of main text div
 //var element = document.getElementById('main-text');
 //element.innerHTML = "Lets do something new";
-/*var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 
 button.onclick = function(){
   //Create a request object
@@ -20,12 +20,12 @@ button.onclick = function(){
     }
     //Not done yet
   };
-  //make a request 
+  //make the request 
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/counter', true);
   request.send(null);
 }; 
 //submit name
-var nameInput = document.getElementById('namecall');
+/*var nameInput = document.getElementById('namecall');
 var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
