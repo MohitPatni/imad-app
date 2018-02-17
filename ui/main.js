@@ -39,7 +39,7 @@ submit.onclick = function(){
         if(request.status === 200){
             //capture the list of name and rander it
     var names = request.responseText;
-    names = JSON.paras(names);// covert a string back into an array.
+    names = JSON.parse(names);// covert a string back into an array.
     var list ='';
     for (var i=0;i<names.length;i++){
     list += '<li>'+ names[i] +'</li>';
