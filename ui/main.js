@@ -53,7 +53,7 @@ submit.onclick = function(){
 
   //make the request 
  var nameInput = document.getElementById('name');
- var name = nameInput.value;
+ var name = nameInput.Value;
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/submit-name?name='+ name, true);
   request.send(null);
 }; 
