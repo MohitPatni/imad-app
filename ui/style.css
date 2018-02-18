@@ -22,7 +22,24 @@ body {
 .menu {
     padding :25px;
 }
-     
+.menu ul {
+    list-style-type: none;
+}
+.menu ul li{
+    float: left;
+}
+.menu ul li a 
+{
+	color: #fff;
+	text-decoration: none;
+  position: static;
+}
+.menu ul li a:hover
+{
+  color: black;
+
+}
+
 .container{
         max-width: 800px;
         margin: 0 auto;
