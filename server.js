@@ -113,12 +113,6 @@ app.get('/counter', function (req, res){
 });
 
 
-app.get('/:articleName',function(req,res){
-    //articleName == article-one
-    //articles[articleName] == {} content object of article one
-    var articleName = req.params.articleName;//extract the article name and use in article obj.
-     res.send(createTemplate(articles[articleName]));
-});
 
 
 var names =[];
@@ -138,6 +132,12 @@ app.get('/comment', function(req, res){
   res.send(JSON.stringify(comments));//json coverting aray into a string
 });
 
+app.get('/:articleName',function(req,res){
+    //articleName == article-one
+    //articles[articleName] == {} content object of article one
+    var articleName = req.params.articleName;//extract the article name and use in article obj.
+     res.send(createTemplate(articles[articleName]));
+});
 
 
 app.get('/ui/main.js', function (req, res) {
