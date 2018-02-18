@@ -93,7 +93,7 @@ submit.onclick = function() {
      };
   //capture the response and store into variable.
  //Not done yet
-    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment-one?comment-one='+comment, true);
+    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment-one?comment='+comment, true);
   request.send(null);
 };
    
