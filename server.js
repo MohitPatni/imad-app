@@ -31,7 +31,7 @@ var articles = {
             My long term goal would be reaching the higher position in company like CEO.
             </p>
             `
-                `<input type=textbox id=textbox placeholder="Comment" > </input>`
+              //  `<input type=textbox id=textbox placeholder="Comment" > </input>`
             },
             'article-two' : {
             title: 'Article Two|Mohit Patni',
