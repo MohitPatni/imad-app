@@ -31,10 +31,8 @@
   request.send(null);
 };
         
-            //capture the list of name and rander it
-             
-
-  
+    //capture the list of name and rander it
+            
 var button = document.getElementById('counter');
 
 button.onclick = function(){
