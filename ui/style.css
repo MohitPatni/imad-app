@@ -19,33 +19,10 @@ body {
 .img-medium {
     height: 200px;
 }
-
-.menu ul
-{
- 
-    text-transform: uppercase;
-    list-style-type: none;
-    
+.menu {
+    padding :25px;
 }
-.menu ul li
-{
- float: left;
- padding: 5px;
- margin-bottom: 5px;
- margin-left: 0 ;
-}
-.menu ul li a 
-{
-	color: #fff;
-	text-decoration: none;
-	padding: 5px;
-  position: static;
-}
-.menu ul li a:hover
-{
-  color: black;
-
-}
+     
 .container{
         max-width: 800px;
         margin: 0 auto;
