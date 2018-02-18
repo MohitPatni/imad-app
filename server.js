@@ -32,7 +32,7 @@ var articles = {
             </p>
             <lable>Comment : </lable><br/>
               <textarea name="comment" rows="8" cols="65" id = "one-comment" placeholder="Enter text here..."></textarea><br/>
-               <input type ="submit" style="height: 30px; width: 500px" value ="submit" id="submit_one"></input>
+               <input type ="submit" style="height: 30px; width: 550px" value ="submit" id="submit_one"></input>
             `
             },
             'article-two' : {
