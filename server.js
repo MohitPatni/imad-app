@@ -121,6 +121,13 @@ app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(names));//json coverting aray into a string
 });
+var comments= [];
+app.get('/comment-one/:comment', function(req, res){
+     var comment = req.params.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
+});
 
 
 app.get('/:articleName',function(req,res){
@@ -131,13 +138,6 @@ app.get('/:articleName',function(req,res){
 });
 
 
-var comments= [];
-app.get('/comment-one/:comment', function(req, res){
-     var comment = req.params.comment;//extract name
-  comments.push(comment);
-  //JOSON javascrpit Object Notation
-  res.send(JSON.stringify(comments));//json coverting aray into a string
-});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
