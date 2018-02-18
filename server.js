@@ -30,11 +30,7 @@ var articles = {
             <p>
             My long term goal would be reaching the higher position in company like CEO.
             </p>
-            <lable>Comment : </lable><br/>
-              <textarea name="comment" rows="8" cols="70" id = "articleOne_comment" required="" placeholder="Enter text here..."></textarea><br/>
-               <input type ="submit" style="height: 30px; width: 510px" value ="submit" id="submit_one"></input>
-               <ui id ="commentlist">
-               </ui>
+            
             `
             },
             'article-two' : {
