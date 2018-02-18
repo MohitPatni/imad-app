@@ -85,7 +85,7 @@ var htmlTemplate =`
         </head>
         <body>
             <div class="container">
-            <div>
+            <div class = "menu">
                 <a href="/">Home</a>
                  <a href="/comment">Comments</a>
                   <a href="/article-one">Article One</a>
