@@ -43,8 +43,9 @@ var articles = {
             <p>
             My long term goal would be reaching the higher position in company like CEO.
             </p>
-              <textarea name="comment" rows="8" cols="80" id = "one-comment" placeholder="Enter text here..."></textarea>
-               <input type ="submit" value ="submit" id="submit_one"></input>
+            <lable>Comment</lable>
+              <textarea name="comment" rows="8" cols="80" id = "one-comment" placeholder="Enter text here..."></textarea></br>
+               <input type ="submit" style="height: 25px; width: 100px" value ="submit" id="submit_one"></input>
        
             `},
             'article-three' : { 
