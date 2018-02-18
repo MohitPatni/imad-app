@@ -70,7 +70,7 @@ var submit = document.getElementById('submit_one');
         //take some action
          if(request.status === 200){
             //capture the list of name and rander it
-             var comments = request.responseText;
+             var comments = ['mhhb','iuuh','ugug'];//request.responseText;
              comments = JSON.parse(comments);// convert a string back into an array.
              var list ='';
              for (var i=0 ; i < comments.length ; i++){
@@ -83,6 +83,6 @@ var submit = document.getElementById('submit_one');
   };
     var commentInput = document.getElementById('articleOne_comment');
  var comment = commentInput.value;
-  request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/articleOne-comment?comment='+ comment, true);
+  request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/articleOne-comment'+ comment, true);
   request.send(null);
   };
