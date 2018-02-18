@@ -79,6 +79,8 @@ var htmlTemplate =`
             <div class="container">
             <div>
                 <a href="/">Home</a>
+                 <a href="/comment">Comments</a>
+                
             </div>
             <hr/>
             <h4>
