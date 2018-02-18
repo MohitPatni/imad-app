@@ -24,13 +24,16 @@ body {
 }
 .menu ul {
     list-style-type: none;
+    padding: 22px;
 }
 .menu ul li{
     float: left;
+    padding: 20px;
+    margin-left: 5px;
 }
 .menu ul li a 
 {
-	color: #fff;
+ color: rgb(150, 70, 41);
 	text-decoration: none;
   position: static;
 }
