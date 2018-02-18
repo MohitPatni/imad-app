@@ -104,7 +104,13 @@ var htmlTemplate =`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+var comments= [];
+app.get('/comment-one/:comment', function(req, res){
+     var comment = req.params.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
+});
 app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
 });
@@ -148,13 +154,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var comments= [];
-app.get('/comment-one/:comment', function(req, res){
-     var comment = req.params.comment;//extract name
-  comments.push(comment);
-  //JOSON javascrpit Object Notation
-  res.send(JSON.stringify(comments));//json coverting aray into a string
-});
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
