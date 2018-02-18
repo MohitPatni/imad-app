@@ -64,9 +64,8 @@ button.onclick = function(){
          //comment
           var commentInput = document.getElementById('commentid');
  var comment = commentInput.value;
-  submit=document.getElementById('submit_id');
-    submit.onclick = function() {
-
+ function fun1() {
+  document.getElementById('submit_id').submit;
     //Create a request object
    var request  = new XMLHttpRequest();
    request.onreadystatechange = function () {
@@ -83,7 +82,7 @@ button.onclick = function(){
        }
   //takr a action
      
-            }
+    }
      };
   //capture the response and store into variable.
  //Not done yet
@@ -91,7 +90,7 @@ button.onclick = function(){
  var comment = commentInput.value;
     request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment-one?comment='+comment, true);
   request.send(null);
-};
+}
 
  
  
