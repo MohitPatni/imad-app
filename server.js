@@ -43,7 +43,7 @@ var articles = {
             <p>
             My long term goal would be reaching the higher position in company like CEO.
             </p>
-              <textarea name="comment" id = "one-comment" placeholder="Enter text here..."></textarea>
+              <textarea name="comment" rows="4" cols="50" id = "one-comment" placeholder="Enter text here..."></textarea>
             
        
             `},
