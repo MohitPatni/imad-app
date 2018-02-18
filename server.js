@@ -114,13 +114,7 @@ app.get('/counter', function (req, res){
     counter = counter + 1;
    res.send(counter.toString()); 
 });
-var comments= [];
-app.get('/comment-one/:comment', function(req, res){
-     var comment = req.query.comment;//extract name
-  comments.push(comment);
-  //JOSON javascrpit Object Notation
-  res.send(JSON.stringify(comments));//json coverting aray into a string
-});
+
 
 var names =[];
 app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
@@ -139,7 +133,13 @@ app.get('/:articleName',function(req,res){
     var articleName = req.params.articleName;//extract the article name and use in article obj.
      res.send(createTemplate(articles[articleName]));
 });
-
+var comments= [];
+app.get('/comment-one/:comment', function(req, res){
+     var comment = req.query.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
+});
 
 
 app.get('/ui/main.js', function (req, res) {
