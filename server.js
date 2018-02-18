@@ -148,8 +148,8 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var comments= [];
-app.get('/comment-one/:comment', function(req, res){
-     var comment = req.params.comment;//extract name
+app.get('/comment-one', function(req, res){
+     var comment = req.query.comment;//extract name
   comments.push(comment);
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(comments));//json coverting aray into a string
