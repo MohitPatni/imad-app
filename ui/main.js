@@ -86,7 +86,7 @@ button.onclick = function(){
  //Not done yet
  var commentInput = document.getElementById('commentid');
  var comment = commentInput.value;
-    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment-one/'+comment, true);
+    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io//comment-one?comment'+comment, true);
   request.send(null);
 };
 
