@@ -104,8 +104,6 @@ app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
 });
 
-
-
 var counter = 0;
 app.get('/counter', function (req, res){
     counter = counter + 1;
@@ -134,7 +132,7 @@ app.get('/:articleName',function(req,res){
 
 
 var comments= [];
-app.get('/comment', function(req, res){
+app.get('/comment/:comment', function(req, res){
      var comment = req.params.comment;//extract name
   comments.push(comment);
   //JOSON javascrpit Object Notation
