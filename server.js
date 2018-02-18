@@ -110,11 +110,6 @@ app.get('/comment', function (req, res) {
 });
 
 
-var counter = 0;
-app.get('/counter', function (req, res){
-    counter = counter + 1;
-   res.send(counter.toString()); 
-});
 
 
 
@@ -128,6 +123,11 @@ app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
 });
 
 
+var counter = 0;
+app.get('/counter', function (req, res){
+    counter = counter + 1;
+   res.send(counter.toString()); 
+});
 
 app.get('/:articleName',function(req,res){
     //articleName == article-one
