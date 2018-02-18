@@ -8,21 +8,29 @@
     submit.onclick = function() {
 
     //Create a request object
-
-  
-  //capture the response and store into variable.
-
-        //take some action
-            //capture the list of name and rander it
-             var comments = ['mhhb','iuuh','ugug'];//request.responseText;
-            // comments = JSON.parse(comments);// convert a string back into an array.
+   var request  = new XMLHttpRequest();
+   request.onreadystatechange = function () {
+    if(request.readyState === XMLHttpRequest.DONE) {
+       if(request.status === 200){
+         var comments = request.responseText;//request.responseText;
+            comments = JSON.parse(comments);// convert a string back into an array.
              var list ='';
              for (var i=0 ; i < comments.length ; i++){
                      list += '<li>'+ comments[i] +'</li>';
                     }
             var ul =  document.getElementById('commentlist');
-            ul.innerHTML = list;
-            };
+            ul.innerHTML = list; 
+    }
+  //takr a action
+     
+            }
+     };
+  //capture the response and store into variable.
+
+};
+        
+            //capture the list of name and rander it
+             
 
   
 var button = document.getElementById('counter');
@@ -42,6 +50,8 @@ button.onclick = function(){
         }
     }
     //Not done yet
+    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment', true);
+  request.send(null);
   };
   //make the request 
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/counter', true);
