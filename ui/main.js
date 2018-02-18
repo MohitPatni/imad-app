@@ -4,7 +4,7 @@
 //element.innerHTML = "Lets do something new";
 var button = document.getElementById('counter');
 
-button.onclick = function(){
+button.onClick = function(){
   //Create a request object
   var request  = new XMLHttpRequest();
   
