@@ -116,7 +116,7 @@ app.get('/counter', function (req, res){
 });
 
 
-var comments= [];
+
 
 var names =[];
 app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
@@ -136,6 +136,7 @@ app.get('/:articleName',function(req,res){
      res.send(createTemplate(articles[articleName]));
 });
 
+var comments= [];
 app.get('/comment-one/:comment', function(req, res){
      var comment = req.params.comment;//extract name
   comments.push(comment);
