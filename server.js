@@ -115,7 +115,7 @@ app.get('/counter', function (req, res){
    res.send(counter.toString()); 
 });
 var comments= [];
-app.get('/comment-one', function(req, res){
+app.get('/comment-one/:comment', function(req, res){
      var comment = req.query.comment;//extract name
   comments.push(comment);
   //JOSON javascrpit Object Notation
