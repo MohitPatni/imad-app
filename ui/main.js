@@ -60,7 +60,7 @@ submit.onclick = function() {
      var commentInput = document.getElementById('commentid');
  var comment = commentInput.value;
  var submit = document.getElementById('submit_id');
-    submit.onclick = function() {
+    button.onclick = function() {
 
     //Create a request object
 
