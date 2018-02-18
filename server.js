@@ -103,6 +103,13 @@ app.get('/', function (req, res) {
 app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
 });
+var comments= [];
+app.get('/comment-one/:comment', function(req, res){
+     var comment = req.params.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
+});
 
 var counter = 0;
 app.get('/counter', function (req, res){
@@ -111,13 +118,6 @@ app.get('/counter', function (req, res){
 });
 
 
-var comments= [];
-app.get('/comment-one/:comment', function(req, res){
-     var comment = req.params.comment;//extract name
-  comments.push(comment);
-  //JOSON javascrpit Object Notation
-  res.send(JSON.stringify(comments));//json coverting aray into a string
-});
 
 var names =[];
 app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
