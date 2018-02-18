@@ -109,6 +109,13 @@ app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
 });
 
+var counter = 0;
+app.get('/counter', function (req, res){
+    counter = counter + 1;
+   res.send(counter.toString()); 
+});
+
+
 var comments= [];
 app.get('/comment-one/:comment', function(req, res){
      var comment = req.params.comment;//extract name
@@ -125,16 +132,6 @@ app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(names));//json coverting aray into a string
 });
-
-
-
-var counter = 0;
-app.get('/counter', function (req, res){
-    counter = counter + 1;
-   res.send(counter.toString()); 
-});
-
-
 
 
 
