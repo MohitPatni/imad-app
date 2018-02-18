@@ -2,6 +2,41 @@
 // change the text of main text div
 //var element = document.getElementById('main-text');
 //element.innerHTML = "Lets do something new";
+
+
+
+var submit = document.getElementById('submit_btn');
+submit.onclick = function() {
+    
+    //Create a request object
+  var request  = new XMLHttpRequest();
+  
+  //capture the response and store into variable.
+  request.onreadystatechange = function () {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        //take some action
+         if(request.status === 200){
+            //capture the list of name and rander it
+             var names = request.responseText;
+             names = JSON.parse(names);// convert a string back into an array.
+             var list ='';
+             for (var i=0 ; i < names.length ; i++){
+                     list += '<li>'+ names[i] +'</li>';
+                    }
+            var ul =  document.getElementById('namelist');
+            ul.innerHTML = list;
+        }
+    }
+    //Not done yet
+  };
+
+  //make the request
+ var nameInput = document.getElementById('name');
+ var name = nameInput.value;
+  request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/submit-name?name='+ name, true);
+  request.send(null);
+}; 
+    //comment
  var commentInput = document.getElementById('commentid');
  var comment = commentInput.value;
  var submit = document.getElementById('submit_id');
@@ -56,36 +91,3 @@ button.onclick = function(){
   request.send(null);
 }; 
 //submit name
-
-var submit = document.getElementById('submit_btn');
-submit.onclick = function() {
-    
-    //Create a request object
-  var request  = new XMLHttpRequest();
-  
-  //capture the response and store into variable.
-  request.onreadystatechange = function () {
-    if(request.readyState === XMLHttpRequest.DONE) {
-        //take some action
-         if(request.status === 200){
-            //capture the list of name and rander it
-             var names = request.responseText;
-             names = JSON.parse(names);// convert a string back into an array.
-             var list ='';
-             for (var i=0 ; i < names.length ; i++){
-                     list += '<li>'+ names[i] +'</li>';
-                    }
-            var ul =  document.getElementById('namelist');
-            ul.innerHTML = list;
-        }
-    }
-    //Not done yet
-  };
-
-  //make the request
- var nameInput = document.getElementById('name');
- var name = nameInput.value;
-  request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/submit-name?name='+ name, true);
-  request.send(null);
-}; 
-    
