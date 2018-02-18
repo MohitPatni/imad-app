@@ -20,6 +20,32 @@ body {
     height: 200px;
 }
 
+.menu ul
+{
+ 
+    text-transform: uppercase;
+    list-style-type: none;
+    
+}
+.menu ul li
+{
+ float: left;
+ padding: 40px;
+ margin-bottom: 50px;
+ margin-left: 80px;
+}
+.menu ul li a 
+{
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+  position: static;
+}
+.menu ul li a:hover
+{
+  color: black;
+
+}
 .container{
         max-width: 800px;
         margin: 0 auto;
@@ -27,5 +53,4 @@ body {
         font-family: sans-serif;
         padding-left: 20px;
         padding-right: 20px;
-        
-            }
+        }
