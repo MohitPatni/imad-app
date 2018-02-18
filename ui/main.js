@@ -62,6 +62,8 @@ button.onclick = function(){
 
 
          //comment
+          var commentInput = document.getElementById('commentid');
+ var comment = commentInput.value;
  var submit = document.getElementById('submit_id');
     submit.onclick = function() {
 
