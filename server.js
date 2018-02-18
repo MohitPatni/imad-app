@@ -31,8 +31,10 @@ var articles = {
             My long term goal would be reaching the higher position in company like CEO.
             </p>
             <lable>Comment : </lable><br/>
-              <textarea name="comment" rows="8" cols="70" id = "one-comment" required="" placeholder="Enter text here..."></textarea><br/>
+              <textarea name="comment" rows="8" cols="70" id = "articleOne_comment" required="" placeholder="Enter text here..."></textarea><br/>
                <input type ="submit" style="height: 30px; width: 510px" value ="submit" id="submit_one"></input>
+               <ui id ="commentlist"
+               </ui>
             `
             },
             'article-two' : {
@@ -117,6 +119,14 @@ app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
   names.push(name);
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(names));//json coverting aray into a string
+});
+
+var comments= [];
+app.get('/articleOne-comment', function(req, res){
+     var comment = req.params.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
 });
 
 
