@@ -79,7 +79,7 @@ submit.onclick = function() {
     if(request.readyState === XMLHttpRequest.DONE) {
        if(request.status === 200){
          var comments = request.responseText;//request.responseText;
-            comments = JSON.parse(comments);// convert a string back into an array.
+            comments = JSON.parase(comments);// convert a string back into an array.
              var list ='';
              for (var i=0 ; i < comments.length ; i++){
                      list += '<li>'+ comments[i] +'</li>';
