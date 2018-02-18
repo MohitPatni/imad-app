@@ -113,6 +113,15 @@ app.get('/comment', function (req, res) {
 
 
 
+
+
+
+var counter = 0;
+app.get('/counter', function (req, res){
+    counter = counter + 1;
+   res.send(counter.toString()); 
+});
+
 var names =[];
 app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
   //get the name from the request
@@ -120,13 +129,6 @@ app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
   names.push(name);
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(names));//json coverting aray into a string
-});
-
-
-var counter = 0;
-app.get('/counter', function (req, res){
-    counter = counter + 1;
-   res.send(counter.toString()); 
 });
 
 var comments= [];
