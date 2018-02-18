@@ -132,7 +132,7 @@ app.get('/:articleName',function(req,res){
 
 
 var comments= [];
-app.get('/comment/:comment', function(req, res){
+app.get('/comment-one/:comment', function(req, res){
      var comment = req.params.comment;//extract name
   comments.push(comment);
   //JOSON javascrpit Object Notation
