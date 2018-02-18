@@ -4,6 +4,7 @@
 //element.innerHTML = "Lets do something new";
          //submit name
 var submit = document.getElementById('submit_btn');
+
 submit.onclick = function() {
     
     //Create a request object
