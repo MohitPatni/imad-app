@@ -92,7 +92,7 @@ var htmlTemplate =`
                   <a href="/article-two">Article Two</a>
                     <a href="/article-three">Article Three</a>
             </div>
-            <hr/>
+            
             <h4>
            ${heading}
             </h4>
