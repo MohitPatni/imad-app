@@ -43,7 +43,7 @@ var articles = {
             <p>
             My long term goal would be reaching the higher position in company like CEO.
             </p>
-            <div style="width: 500px;>
+            <div style="width: 100px;>
               <input type ="text" id ="two-comment" placeholder="Comment" ></input>
             </div>
             `},
