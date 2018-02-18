@@ -20,13 +20,15 @@
                     }
             var ul =  document.getElementById('commentlist');
             ul.innerHTML = list; 
-    }
+       }
   //takr a action
      
             }
      };
   //capture the response and store into variable.
-
+ //Not done yet
+    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment', true);
+  request.send(null);
 };
         
             //capture the list of name and rander it
@@ -49,9 +51,7 @@ button.onclick = function(){
             span.innerHTML = counter.toString();
         }
     }
-    //Not done yet
-    request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/comment', true);
-  request.send(null);
+   
   };
   //make the request 
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/counter', true);
