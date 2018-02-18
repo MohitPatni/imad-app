@@ -60,8 +60,6 @@ var articles = {
             </p>
             `}
 };
-
-
 function createTemplate (data){
    var title = data.title;
    var heading = data.heading;
@@ -130,13 +128,13 @@ app.get('/:articleName',function(req,res){
     var articleName = req.params.articleName;//extract the article name and use in article obj.
      res.send(createTemplate(articles[articleName]));
 });
-/*var comments= [];
+var comments= [];
 app.get('/articleOne-comment', function(req, res){
      var comment = req.params.comment;//extract name
   comments.push(comment);
   //JOSON javascrpit Object Notation
   res.send(JSON.stringify(comments));//json coverting aray into a string
-});*/
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
