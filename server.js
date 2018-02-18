@@ -134,7 +134,7 @@ app.get('/:articleName',function(req,res){
      res.send(createTemplate(articles[articleName]));
 });
 var comments= [];
-app.get('/comment-one/:comment', function(req, res){
+app.get('/comment-one', function(req, res){
      var comment = req.query.comment;//extract name
   comments.push(comment);
   //JOSON javascrpit Object Notation
