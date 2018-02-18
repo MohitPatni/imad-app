@@ -2,6 +2,29 @@
 // change the text of main text div
 //var element = document.getElementById('main-text');
 //element.innerHTML = "Lets do something new";
+ var commentInput = document.getElementById('commentid');
+ var comment = commentInput.value;
+ var submit = document.getElementById('submit_id');
+    submit.onclick = function() {
+
+    //Create a request object
+
+  
+  //capture the response and store into variable.
+
+        //take some action
+            //capture the list of name and rander it
+             var comments = ['mhhb','iuuh','ugug'];//request.responseText;
+            // comments = JSON.parse(comments);// convert a string back into an array.
+             var list ='';
+             for (var i=0 ; i < comments.length ; i++){
+                     list += '<li>'+ comments[i] +'</li>';
+                    }
+            var ul =  document.getElementById('commentlist');
+            ul.innerHTML = list;
+            };
+
+  
 var button = document.getElementById('counter');
 
 button.onclick = function(){
@@ -57,26 +80,4 @@ submit.onclick = function() {
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/submit-name?name='+ name, true);
   request.send(null);
 }; 
-     var commentInput = document.getElementById('commentid');
- var comment = commentInput.value;
- var submit = document.getElementById('submit_id');
-    submit.runclick = function() {
-
-    //Create a request object
-
-  
-  //capture the response and store into variable.
-
-        //take some action
-            //capture the list of name and rander it
-             var comments = ['mhhb','iuuh','ugug'];//request.responseText;
-            // comments = JSON.parse(comments);// convert a string back into an array.
-             var list ='';
-             for (var i=0 ; i < comments.length ; i++){
-                     list += '<li>'+ comments[i] +'</li>';
-                    }
-            var ul =  document.getElementById('commentlist');
-            ul.innerHTML = list;
-            };
-
-  
+    
