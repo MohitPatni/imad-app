@@ -104,13 +104,7 @@ var htmlTemplate =`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var comments= [];
-app.get('/comment-one/:comment', function(req, res){
-     var comment = req.params.comment;//extract name
-  comments.push(comment);
-  //JOSON javascrpit Object Notation
-  res.send(JSON.stringify(comments));//json coverting aray into a string
-});
+
 app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
 });
@@ -120,7 +114,13 @@ app.get('/counter', function (req, res){
     counter = counter + 1;
    res.send(counter.toString()); 
 });
-
+var comments= [];
+app.get('/comment-one/:comment', function(req, res){
+     var comment = req.params.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
+});
 
 var names =[];
 app.get('/submit-name' , function(req,res){ // URL:  /submit-name?name = xxx
