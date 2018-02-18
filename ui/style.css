@@ -30,15 +30,15 @@ body {
 .menu ul li
 {
  float: left;
- padding: 10px;
- margin-bottom: 10px;
+ padding: 5px;
+ margin-bottom: 5px;
  margin-left: 0 ;
 }
 .menu ul li a 
 {
 	color: #fff;
 	text-decoration: none;
-	padding: 10px;
+	padding: 5px;
   position: static;
 }
 .menu ul li a:hover
