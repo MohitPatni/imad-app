@@ -19,7 +19,7 @@ body {
 .img-medium {
     height: 200px;
 }
-.menu {
+/*.menu {
     padding :25px;
 }
 .menu ul {
@@ -43,11 +43,12 @@ body {
 
 }
 
-/*.container{*/
-/*        max-width: 800px;*/
-/*        margin: 0 auto;*/
-/*        color: #525265;*/
-/*        font-family: sans-serif;*/
-/*        padding-left: 20px;*/
-/*        padding-right: 20px;*/
-/*        }*/
+.container{
+        max-width: 800px;
+        margin: 0 auto;
+        color: #525265;
+        font-family: sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+        */
