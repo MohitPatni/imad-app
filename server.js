@@ -86,14 +86,13 @@ var htmlTemplate =`
         <body>
             <div class="container">
             <div class ="menu" >
-                <ul>
-                 <li><a href="/">Home</a></li>
-                 <li><a href="/profile">Profile</a></li>
-                  <li><a href="/article-one">Article One</a></li>
-                 <li> <a href="/article-two">Article Two</a></li>
-                  <li><a href="/article-three">Article Three</a></li>
-                   <li><a href="/comment">Comments</a></li>
-                   </ul>
+        
+                 <a href="/">Home</a>
+                 <a href="/article-one">Article One</a>
+                <a href="/article-two">Article Two</a>
+                  <a href="/article-three">Article Three</a>
+                   <a href="/comment">Comments</a>
+                 
                    </div>
             <br/>
             <hr/>
