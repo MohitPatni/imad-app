@@ -20,29 +20,29 @@ body {
 .img-medium {
     height: 200px;
 }
-.menu {
-    padding :25px;
-}
-.menu ul {
-    list-style-type: none;
-    padding: 17px;
-}
+/*.menu {*/
+/*    padding :25px;*/
+/*}*/
+/*.menu ul {*/
+/*    list-style-type: none;*/
+/*    padding: 17px;*/
+/*}*/
 /*.menu ul li{*/
 /*    float: left;*/
 /*    padding: 20px;*/
 /*    margin-left: 5px;*/
 /*}*/
-.menu ul  a 
-{
- color: rgb(150, 70, 41);
-	text-decoration: none;
-  position: static;
-}
-.menu ul a:hover
-{
-  color: black;
+/*.menu ul  a */
+/*{*/
+/* color: rgb(150, 70, 41);*/
+/*	text-decoration: none;*/
+/*  position: static;*/
+/*}*/
+/*.menu ul a:hover*/
+/*{*/
+/*  color: black;*/
 
-}
+/*}*/
 
 /*.container{*/
 /*        max-width: 800px;*/
