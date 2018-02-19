@@ -1,13 +1,13 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Home | Mohit Patni</title>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class = "container">
-                  <div class ="menu" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile | Mohit Patni</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+       <div class ="menu" >
                 <ul>
                  <li><a href="/">Home</a></li>
                  <li><a href="/profile">Profile</a></li>
@@ -17,44 +17,48 @@
                    <li><a href="/comment">Comments</a></li>
                    </ul>
                    </div>
-            <br/>
-                   <hr/>
-                   
-            <div class="center">
-                <img src="https://raw.githubusercontent.com/MohitPatni/imad-app/master/ui/mj.JPG" class="img-medium"/>
-            </div>
-            <hr/>
-            <div id="main-text" class="center text-big bold">
-                <h3>
-                   Personal
-                </h3>
-            <div>
-                hi,My name is mohit patni.
-            </div>
-                 <hr/>
-                <h3>professional</h3>
-            <div>
-                  I am student.
-            </div>
-            <hr/>
-            <h3>Love Story</h3>
-            <div>
-                  Nhi batauga......hehehe.....:-)
-            </div>
-                <hr/>
-                 <div class = "footer">
-                   This button <button id = "counter">click here</button>  has been clicked <span id="count"> 0 </span> times.
-                     <hr/>
-                    
-                     <input type ="text" id ="name" required=""  placeholder="name"></input>
-                     <input type ="submit" value ="submit" id="submit_btn"></input>
-                      <ul id="namelist">
-                     </ul>
-                  </div>
-                 </div> 
-         </div>
-           
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
+   <center> <a href="/">Home</a></center>
+  <div class="container text-center full-height">
+    <div class="row content">
+      <div class="col-sm-4 sidenav">
+        <div class="thumbnail">
+          <!-- Change the link in the src attribute below to an image available on the Internet -->
+          <img src="https://raw.githubusercontent.com/MohitPatni/imad-app/master/ui/profile.JPG" alt="Lights" style="width:100%" />
+        </div>
+        <h2 align="center"><b>Name</b></h2>
+        <p align="center">Profession : Student,<br>Organisation : AITR,<br>Place : Indore.</p>
+      </div>
+
+      <div class="col-sm-8 text-left">
+        <h3>About me</h3>
+        <p>I'm in love with my dreams,marrired to success and having an affair with life.</p>
+        <p>My strengths are my attitude that I like to take challenges that I CAN do it, self motivated person, self disciplined I am a good team player as well as has a good ability to lead the team. I can adopt to any kind of environment. I am a good listener and quick learner.</p>
+        <hr>
+        <h3>Education</h3>
+     <p> I have done B.sc in Computer science from DAVV univercity Indore.As my roots are from Sonkatch. So I completed my 12<sup>th</sup> from SP School with good percentage</p>
+       <!--<p>My educational background</p>-->
+        <hr>
+        <h3>Experience</h3>
+        <p>I am fresher </p>
+        <hr>
+        <h3>A cool thing I've done recently</h3>
+        <p>Party<p>
+        <hr>
+         <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="I just built #myfirstapp with #imad! @HasuraEd. Check it out here - " data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+         <iframe id="fb_share" src="" width="84" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+         <script>
+            var current_url = window.location.href;
+            document.getElementById("fb_share").src="https://www.facebook.com/plugins/share_button.php?href="+current_url+"&layout=button_count&size=large&mobile_iframe=true&appId&width=84&height=28";
+         </script>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center footer">
+    A little quote I like :
+    Jb Tk Ladki H KuMaRi....nA tuMhAri nA huMari.....
+  </footer>
+</body>
 </html>
+
+    
