@@ -120,6 +120,10 @@ app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
 });
 
+app.get('/profile', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+});
+
 var counter = 0;
 app.get('/counter', function (req, res){
     counter = counter + 1;
@@ -144,9 +148,7 @@ app.get('/:articleName',function(req,res){
      res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/profile', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-});
+
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
