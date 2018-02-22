@@ -169,7 +169,8 @@ app.get('/articles/:articleName',function(req,res){
     //articleName == article-one
     //articles[articleName] == {} content object of article one
     //extract the article name and use in article obj.
-    pool.query("SELECT * FROM article WHERE title = " + req.params.articleName, function(err, result){ 
+    //SELECT * FROM article WHERE title = article-one that means substract instand of thi use that 'article-one'
+    pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function(err, result){ 
         if(err){
             res.status(500).send(err.toString());
         } else {
