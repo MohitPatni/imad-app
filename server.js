@@ -35,7 +35,7 @@ var htmlTemplate =`
             <div class ="menu" >
         <ul>
                  <a href="/">Home</a>
-                 <a href="/article-one">Article One</a>
+                 <a href="/articles/:articleName">Article One</a>
                 <a href="/article-two">Article Two</a>
                   <a href="/article-three">Article Three</a>
                    <a href="/comment">Comments</a>
