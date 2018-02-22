@@ -14,13 +14,6 @@ var config ={
 var app = express();
 app.use(morgan('combined'));
 
-var comments= [];
-app.get('/comment-one', function(req, res){
-     var comment = req.query.comment;//extract name
-  comments.push(comment);
-  //JOSON javascrpit Object Notation
-  res.send(JSON.stringify(comments));//json coverting aray into a string
-});
 
 
 var articles = {
@@ -140,6 +133,13 @@ app.get('/db-test', function (req, res) {
 
 app.get('/comment', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commentme.html'));
+});
+var comments= [];
+app.get('/comment-one', function(req, res){
+     var comment = req.query.comment;//extract name
+  comments.push(comment);
+  //JOSON javascrpit Object Notation
+  res.send(JSON.stringify(comments));//json coverting aray into a string
 });
 
 
