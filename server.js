@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg').pool;
+var Pool = require('pg').Pool;
 
 var config = {
     
@@ -119,7 +119,7 @@ app.get('/', function (req, res) {
 });
 
 
-//var pool = new Pool(config);
+var pool = new Pool(config);
 app.get('/db-test', function (req, res) {
 //     //make a select request
 //     //return a response with the result 
