@@ -130,9 +130,9 @@ app.get('/db-test', function (req, res) {
     //make a select request
     //return a response with the result 
     pool.query('SELECT * FROM test',function(err ,result){
-      if(err){
+      if(err) {
           res.status(500).send(err.toString());
-      }else{
+      } else {
           res.send(JSON.stringify(result));
       }
     });
