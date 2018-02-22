@@ -16,61 +16,6 @@ app.use(morgan('combined'));
 
 
 
-var articles = {
-            'article-one' : {
-    title: 'Article One | Mohit Patni',
-    heading: 'Article one',
-    date: 'Feb 15 2018',
-    content: `
-            <p>
-            Hi, My Name Is Mohit Patni.
-            </p>
-            <p>
-            I have done B.sc in Computer science from DAVV university Indore with 66%.As my roots are from Sonkatch. So I completed my 12<sup>th</sup> from SP School with 77%
-            </p>
-            <p>
-            I am fresher but
-            </p>
-            <p>
-            My strengths are my attitude that I like to take challenges that I CAN do it, self motivated person, self disciplined I am a good team player as well as has a good ability to lead the team. I can adopt to any kind of environment. I am a good listener and quick learner.
-            </p>
-            <p>
-            My short term goal is to get placed in a reputed company which will give me an opportunity to enhance my skills and Knowledge.
-            </p>
-            <p>
-            My long term goal would be reaching the higher position in company like CEO.
-            </p>
-            
-            `
-            },
-            'article-two' : {
-            title: 'Article Two | Mohit Patni',
-            heading: 'Article Two',
-             date: 'Feb 16 2018',
-             content: `
-            <p>
-            Hi, My Name Is Mohit Patni.
-            </p>
-            <p>
-            My long term goal would be reaching the higher position in company like CEO.
-            </p>
-            
-       
-            `},
-            'article-three' : { 
-            title: 'Article Three | Mohit Patni',
-            heading: 'Article Three',
-            date: 'Feb 16 2018',
-            content: `
-            <p>
-            Hi, My Name Is Mohit Patni.
-            </p>
-            <p>
-            My long term goal would be reaching the higher position in company like CEO.
-            </p>
-            `}
-};
-
 function createTemplate (data){
    var title = data.title;
    var heading = data.heading;
