@@ -119,7 +119,7 @@ app.get('/', function (req, res) {
 });
 
 // var pool = new pool(config);
- pool = new Pool(config);
+var pool = new Pool(config);
 app.get('/db-test', function (req, res) {
 //     //make a select request
 //     //return a response with the result 
