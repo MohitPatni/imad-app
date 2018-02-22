@@ -126,7 +126,7 @@ app.get('/', function (req, res) {
 });
 
 var pool = new  pool(config);
-// app.get('/db-test', function (req, res) {
+app.get('/db-test', function (req, res) {
 //     //make a select request
 //     //return a response with the result 
 //     pool.query('SELECT * FROM test',function(err ,result){
@@ -135,7 +135,7 @@ var pool = new  pool(config);
 //       } else {
 //           res.send(JSON.stringify(result));
 //       }
-//     });
+  });
 // });
 
 app.get('/comment', function (req, res) {
