@@ -37,7 +37,7 @@ var htmlTemplate =`
                  <a href="/">Home</a>
                  <a href="/articles/article-one">Article One</a>
                 <a href="/articles/article-two">Article Two</a>
-                  <a href="/article-three">Article Three</a>
+                  <a href="/articles/article-three">Article Three</a>
                    <a href="/comment">Comments</a>
                      </ul>
                    </div>
