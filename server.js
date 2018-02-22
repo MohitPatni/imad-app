@@ -131,6 +131,9 @@ app.get('/articles/:articleName',function(req,res){
     
 });
 
+app.get('/articles/:article-one', function (req, res) {
+  res.send(article-one);
+});
 
 
 app.get('/ui/main.js', function (req, res) {
