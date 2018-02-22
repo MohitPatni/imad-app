@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var pool = require('pg').pool;
 
-var config ={
+var config = {
     
     user: 'mohitpatni293',
     database: 'mohitpatni293',
@@ -118,7 +118,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*var pool = new  pool(config);
+var pool = new  pool(config);
 app.get('/db-test', function (req, res) {
 //     //make a select request
 //     //return a response with the result 
