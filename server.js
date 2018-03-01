@@ -67,12 +67,18 @@ app.get('/', function (req, res) {
 function hash(input,salt){
 //how to create a hash
 var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-return hashed.toString('hex');
+return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
     
 }
 app.get('/hash/:input', function (req, res){
    var hashedString = hash(req.params.input,'this is some random string');
    res.send(hashedString);
+   
+   /* algorithm md5
+    (if use thi algo value is always so hacker store it in own table)
+    'password' => 66gaefg211fgsf1f1b2fbd21bbdergr15
+    "password-this-is-some-random-string" => 5dvsafb1adg5dfb15dfs1b5s1fb5ds1b5se1b(completely different hah value and no table in the world which stor this particular hash value)
+    "password" => "password-this-is-salt" => <hash> => <hash> => <hash> * 10k times*/
 });
 
 var pool = new Pool(config);
