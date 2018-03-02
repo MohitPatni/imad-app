@@ -41,8 +41,8 @@ submit.onclick = function() {
 //login username password
 var submit = document.getElementById('submit_button');
 
-submit.onclick = function() {
-
+//submit.onclick = function() {
+function myfun(){
     //Create a request object
   var request  = new XMLHttpRequest();
   
@@ -71,7 +71,7 @@ submit.onclick = function() {
   request.open('POST', 'http://mohitpatni293.imad.hasura-app.io/login', true);
   request.setRequestHeader('Content-type', 'application/json');
   request.send(JSON.stringify({username: username, password: password}));
-}; 
+}
 
 
  //counter  
