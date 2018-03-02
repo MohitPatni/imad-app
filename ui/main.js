@@ -36,6 +36,41 @@ submit.onclick = function() {
   request.send(null);
 }; 
 
+//username password
+var submit = document.getElementById('submit_button');
+
+submit.onclick = function() {
+    
+    //Create a request object
+  var request  = new XMLHttpRequest();
+  
+  //capture the response and store into variable.
+  request.onreadystatechange = function () {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        //take some action
+         if(request.status === 200){
+            //capture the list of name and rander it
+           console.log('User loged in');
+           alert('loged in successfully');
+        }else if (request.status === 403){
+         alert('Username/Password incorrect');   
+        } else if (request.status === 500) {
+            alert('Something went wrong on server');
+        }
+    }
+    //Not done yet
+  };
+
+  //make the request
+ var username = document.getElementById('username').value;
+ var password = document.getElementById('password').value;
+ console.log(username);
+ console.log(password);
+  request.open('POST', 'http://mohitpatni293.imad.hasura-app.io/login', true);
+  request.setRequestHeader('Content-type', 'application/json');
+  request.send(JSON.stringify({username: username, password: password}));
+}; 
+
  //counter  
       var button = document.getElementById('counter');
 
