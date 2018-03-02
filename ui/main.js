@@ -4,7 +4,7 @@
 //element.innerHTML = "Lets do something new";
 
          //submit name
-var submit = document.getElementById('submit_btn');
+/*var submit = document.getElementById('submit_btn');
 
 submit.onclick=function() {
     
@@ -35,7 +35,7 @@ submit.onclick=function() {
  var name = nameInput.value;
   request.open('GET', 'http://mohitpatni293.imad.hasura-app.io/submit-name?name='+ name, true);
   request.send(null);
-}; 
+}; */
 
 
 //login username password
