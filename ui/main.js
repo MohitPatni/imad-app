@@ -36,13 +36,11 @@ submit.onclick = function() {
   request.send(null);
 }; 
 
-//username password
-//var submit = document.getElementById('submit_button');
+//login username password
+var submit = document.getElementById('submit_button');
 
-//submit.onclick = function() {
+submit.onclick = function() {
 
-function functionclick() {    
-document.getElementById('submit_button').submit;     
     //Create a request object
   var request  = new XMLHttpRequest();
   
