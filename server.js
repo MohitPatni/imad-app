@@ -121,16 +121,16 @@ pool.query('SELECT * FROM "user" WHERE username = $1',[username], function(err, 
                       if(hashPassword === dbString){
                         
                         // set the session
-                        req.session.auth = {userId: resuly.rows[0].id};
+                      //  req.session.auth = {userId: resuly.rows[0].id};
                         //set cookie with session id
                         //internally, on the server side, it maps the session id to an object
                         //{auth : {userid}}
                         res.send('Credentials correct!');
                         
-                      }else{
-                             res.send(403).send('Username/Password is invalid');
+                      }//else{
+                       //      res.send(403).send('Username/Password is invalid');
                 
-                      }
+                    //  }
                 }
      }
 });
