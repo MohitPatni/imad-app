@@ -40,8 +40,9 @@ submit.onclick = function() {
 //var submit = document.getElementById('submit_button');
 
 //submit.onclick = function() {
+document.getElementById('submit_button').submit;
 function fun2(){    
-     document.getElementById('submit_button').submit;
+     
     //Create a request object
   var request  = new XMLHttpRequest();
   
