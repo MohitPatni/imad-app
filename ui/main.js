@@ -40,9 +40,9 @@ submit.onclick = function() {
 //var submit = document.getElementById('submit_button');
 
 //submit.onclick = function() {
-document.getElementById('submit_button').submit;
-function fun2(){    
-     
+
+function fun2() {    
+document.getElementById('submit_button').submit;     
     //Create a request object
   var request  = new XMLHttpRequest();
   
@@ -83,7 +83,7 @@ button.onclick = function(){
   //capture the response and store into variable.
   request.onreadystatechange = function () {
     if(request.readyState === XMLHttpRequest.DONE) {
-        //take some action
+        //take some action 
         if(request.status === 200){
             var counter = request.responseText;
             var span = document.getElementById('count');
