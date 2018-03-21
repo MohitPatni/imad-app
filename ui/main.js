@@ -86,7 +86,7 @@ submit.onclick = function() {
          if(request.status === 200){
             //capture the list of name and rander it
            console.log('User Registered');
-           alert('loged in successfully');
+           alert('registered successfully');
         }else if (request.status === 403){
          alert('try again');   
         } else if (request.status === 500) {
@@ -97,13 +97,15 @@ submit.onclick = function() {
   };
 
   //make the request
- var username = document.getElementById('user_name').value;
- var password = document.getElementById('mypassword').value;
- console.log(username);
- console.log(password);
-  request.open('POST', 'http://mohitpatni293.imad.hasura-app.io/create-user', true);
-  request.setRequestHeader('Content-Type', 'application/json');
-  request.send(JSON.stringify( {username: username, password: password} ) );
+   var username = document.getElementById('user_name').value;
+        var password = document.getElementById('mypassword').value;
+        console.log(username);
+        console.log(password);
+        request.open('POST', '/create-user', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({username: username, password: password}));  
+        register.value = 'Registering...';
+ 
 };
  //counter  
       var button = document.getElementById('counter');
