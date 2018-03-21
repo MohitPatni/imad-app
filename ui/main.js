@@ -77,24 +77,23 @@ var submit = document.getElementById('submit_button1');
 submit.onclick = function() {
 //function myfun(){
     //Create a request object
-  var request  = new XMLHttpRequest();
-  
-  //capture the response and store into variable.
-  request.onreadystatechange = function () {
-    if(request.readyState === XMLHttpRequest.DONE) {
-        //take some action
-         if(request.status === 200){
-            //capture the list of name and rander it
-           console.log('User Registered');
-           alert('registered successfully');
-        }else if (request.status === 403){
-         alert('try again');   
-        } else if (request.status === 500) {
-            alert('Something went wrong on server');
-        }
-    }
-    //Not done yet
-  };
+ 
+        // Create a request object
+        var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+              // Take some action
+              if (request.status === 200) {
+                  alert('User created successfully');
+                  register.value = 'Registered!';
+              } else {
+                  alert('Could not register the user');
+                  //register.value = 'Register';
+              }
+          }
+        };
 
   //make the request
    var username = document.getElementById('user_name').value;
@@ -104,7 +103,7 @@ submit.onclick = function() {
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
-        register.value = 'Registering...';
+    
  
 };
  //counter  
