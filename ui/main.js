@@ -102,7 +102,7 @@ submit.onclick = function() {
         register.value = 'Registering...';
     
     };
-}
+
  //counter  
       var button = document.getElementById('counter');
 
