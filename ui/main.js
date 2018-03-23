@@ -72,12 +72,8 @@ submit.onclick = function() {
   request.send(JSON.stringify( {username: username, password: password} ) );
 };
 
-var submit = document.getElementById('submit_button1');
-
-submit.onclick = function() {
-//function myfun(){
-    //Create a request object
- 
+   var register = document.getElementById('submit_button1');
+    register.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
         
@@ -90,22 +86,23 @@ submit.onclick = function() {
                   register.value = 'Registered!';
               } else {
                   alert('Could not register the user');
-                  //register.value = 'Register';
+                  register.value = 'Register';
               }
           }
         };
-
-  //make the request
-   var username = document.getElementById('user_name').value;
+        
+        // Make the request
+        var username = document.getElementById('user_name').value;
         var password = document.getElementById('mypassword').value;
         console.log(username);
         console.log(password);
         request.open('POST', 'http://mohitpatni293.imad.hasura-app.io/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
+        register.value = 'Registering...';
     
- 
-};
+    };
+}
  //counter  
       var button = document.getElementById('counter');
 
