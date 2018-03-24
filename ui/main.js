@@ -181,7 +181,7 @@ function loadLoginForm () {
     document.getElementById('login_area').innerHTML = loginHtml;
     
     // Submit username/password to login
-    var submit = document.getElementById('submit_button');
+    var submit = document.getElementById('login_btn');
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -211,14 +211,14 @@ function loadLoginForm () {
         var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
-        request.open('POST', '/login', true);
+        request.open('POST', 'http://mohitpatni293.imad.hasura-app.io/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));  
         submit.value = 'Logging in...';
         
     };
     
-    var register = document.getElementById('submit_button1');
+    var register = document.getElementById('register_btn');
     register.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -238,8 +238,8 @@ function loadLoginForm () {
         };
         
         // Make the request
-        var username = document.getElementById('user_name').value;
-        var password = document.getElementById('mypassword').value;
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
         request.open('POST', 'http://mohitpatni293.imad.hasura-app.io/create-user', true);
@@ -289,10 +289,10 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>";
+                content += "</ul>"
                 articles.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!');
+                articles.innerHTML('Oops! Could not load all articles!')
             }
         }
     };
@@ -307,7 +307,6 @@ loadLogin();
 
 // Now this is something that we could have directly done on the server-side using templating too!
 loadArticles();
-
  
  
 
