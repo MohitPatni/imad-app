@@ -175,9 +175,7 @@ app.get('/comment-one', function(req, res){
 });
 
 
-app.get('/profile', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-});
+
 
 var counter = 0;
 app.get('/counter', function (req, res){
@@ -233,7 +231,9 @@ app.get('/articles/:articleName',function(req,res){
     
 });
 
-
+app.get('/profile', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
